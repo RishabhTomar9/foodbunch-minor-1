@@ -227,3 +227,100 @@
   font-family: "Roboto";
   font-size: 14px;
 }
+
+/* Add animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* General smooth transition for hover effects */
+a,
+button,
+.custom-button,
+.custom-outline-button {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Banner section animation */
+.banner-heading {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.banner-caption {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Button hover effect */
+.custom-button:hover {
+  background-image: linear-gradient(#a58d00, #d0b200);
+  transform: translateY(-3px);
+}
+
+.custom-outline-button:hover {
+  background-color: #d0b200;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Section headings fade-in effect */
+.wcu-section-heading,
+.menu-section-heading,
+.healthy-food-section-heading,
+.delivery-and-payment-section-heading,
+.thanking-customers-section-heading,
+.follow-us-section-heading {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Card hover effect */
+.wcu-card,
+.menu-item-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wcu-card:hover,
+.menu-item-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon animations */
+.follow-us-icon-container {
+  animation: bounceIn 1.2s ease-in-out;
+}
+
+.follow-us-icon-container:hover {
+  background-color: #d0b200;
+  transform: rotate(360deg);
+}
+
+.icon:hover {
+  color: white;
+}
+
+/* Footer fade-in */
+.footer-section {
+  animation: fadeIn 2s ease-in-out;
+}
