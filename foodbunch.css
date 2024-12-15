@@ -250,7 +250,7 @@ button,
 #navItem1::before, #navItem2::before, #navItem3::before, #navItem4::before {
   content: '';
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: 2px;
   background-color: #d89000;
   bottom: -5px;
