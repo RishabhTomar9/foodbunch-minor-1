@@ -236,26 +236,39 @@ button,
 
 
 
-.food-munch-logo {
-  width: 80px;
-  height: 70px;
-}
-#navItem1 {
+#navItem1, #navItem2, #navItem3, #navItem4 {
   color: #323f4b;
   font-family: "Roboto";
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
-#navItem2 {
-  color: #323f4b;
-  font-family: "Roboto";
+
+#navItem1:hover, #navItem2:hover, #navItem3:hover, #navItem4:hover {
+  color: #d89000;
 }
-#navItem3 {
-  color: #323f4b;
-  font-family: "Roboto";
+
+#navItem1::before, #navItem2::before, #navItem3::before, #navItem4::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #d89000;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
 }
-#navItem4 {
-  color: #323f4b;
-  font-family: "Roboto";
+
+#navItem1:hover::before, #navItem2:hover::before, #navItem3:hover::before, #navItem4:hover::before {
+  transform: translateX(-50%) scaleX(1);
 }
+
+
+
 .banner-section-bg-container {
   background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
   height: 100vh;
@@ -463,3 +476,11 @@ button,
   font-family: "Roboto";
   font-size: 14px;
 }
+
+
+
+
+
+
+
+
